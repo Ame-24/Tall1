@@ -1,0 +1,8 @@
+public class CuentaAhorro extends Cuenta {
+
+    public CuentaAhorro(double saldoInicial, double tasaInteresAnual) {
+        super(saldoInicial, tasaInteresAnual);
+    }
+
+    // Aquí puedes agregar métodos adicionales si quieres
+}
