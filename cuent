@@ -1,0 +1,35 @@
+public class Cuenta {
+    protected double saldo;
+    protected double tasaInteresAnual;
+    protected int transacciones;
+
+    public Cuenta(double saldoInicial, double tasaInteresAnual) {
+        this.saldo = saldoInicial;
+        this.tasaInteresAnual = tasaInteresAnual;
+        this.transacciones = 0;
+    }
+
+    public void depositar(double cantidad) {
+        if (cantidad > 0) {
+            saldo += cantidad;
+            transacciones++;
+        }
+    }
+
+    public boolean retirar(double cantidad) {
+        if (cantidad > 0 && cantidad <= saldo) {
+            saldo -= cantidad;
+            transacciones++;
+            return true;
+        }
+        return false;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public int getTransacciones() {
+        return transacciones;
+    }
+}
